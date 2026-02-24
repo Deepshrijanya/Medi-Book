@@ -4,23 +4,31 @@ import { assets } from '../assets/assets'
 const Contact = () => {
   return (
     <div>
-      
-      <div className='text-center text-2xl pt-10 text-gray-500'>
-        <p>CONTACT <span className='text-gray-700 font-semibold'>US</span></p>
-      </div>
 
-       <div className='my-10 flex flex-col justify-center md:flex-row gap-10 mb-28 text-sm'>
-
-        <img className='w-full md:max-w-[360px]' src={assets.contact_image} alt="" />
-        <div className='flex flex-col justify-center items-start gap-6'>
-          <p className='font-semibold text-lg text-gray-600'>OUR OFFICE</p>
-          <p className='text-gray-500'>54709 Willms Station<br/> Suite 350, Washington, USA</p>
-          <p className='text-gray-500'>Tel: (415) 555‑0132<br/> Email: dibyendushyamal2004@gmail.com </p>
-          <p className='font-semibold text-lg text-gray-600'>Careers at PRESCRIPTO</p>
-          <p className='text-gray-500'>Learn more about our teams and job openings.</p>
-          <button className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>Explore Jobs</button>
+      <div className='max-w-6xl mx-auto px-4'>
+        <div className='text-center text-3xl pt-10 text-text_muted'>
+          <p className='font-light italic'>CONTACT <span className='text-text_primary font-bold not-italic'>US</span></p>
         </div>
-       </div>
+
+        <div className='my-16 flex flex-col justify-center md:flex-row gap-16 mb-28 items-center'>
+          <img className='w-full md:max-w-[400px] rounded-[30px] shadow-2xl border-8 border-white' src={assets.contact_image} alt="" />
+          <div className='flex flex-col justify-center items-start gap-8 bg-ivory p-8 md:p-12 rounded-[20px] shadow-sm border border-teal_tint'>
+            <div>
+              <p className='font-bold text-xl text-text_primary mb-4 uppercase tracking-widest border-b-2 border-primary inline-block pb-1'>Our Office</p>
+              <p className='text-text_secondary leading-relaxed font-medium'>54709 Willms Station<br /> Suite 350, Washington, USA</p>
+            </div>
+            <div>
+              <p className='text-text_secondary leading-relaxed font-medium'>Tel: (415) 555-0132</p>
+              <p className='text-text_secondary leading-relaxed font-medium'>Email: support@medibook.ai</p>
+            </div>
+            <div>
+              <p className='font-bold text-xl text-text_primary mb-4 uppercase tracking-widest border-b-2 border-primary inline-block pb-1'>Careers at MediBook</p>
+              <p className='text-text_secondary leading-relaxed font-medium mb-6'>Learn more about our teams and job openings.</p>
+              <button className='border-2 border-primary text-primary px-10 py-4 text-sm font-bold rounded-xl hover:bg-primary hover:text-white transition-all duration-500 shadow-sm'>Explore Jobs</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 

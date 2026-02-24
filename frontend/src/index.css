@@ -3,19 +3,24 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   font-family: Outfit;
 }
-.active hr{
+
+body {
+  @apply bg-ivory text-text_secondary antialiased;
+}
+
+.active hr {
   @apply block
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   @apply hidden
 }
 
-@media (max-width:740px){
-  .active p{
+@media (max-width:740px) {
+  .active p {
     @apply text-white bg-primary
   }
 }

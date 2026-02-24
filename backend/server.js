@@ -6,10 +6,11 @@ import connectCloudinary from './config/cloudinary.js'
 import adminRouter from './routes/adminRoute.js'
 import doctorRouter from './routes/doctorRoute.js'
 import userRouter from './routes/userRoute.js'
+import chatRouter from './routes/chatRoutes.js'
 
 // app config
 
-const app= express()
+const app = express()
 
 const port = process.env.PORT || 4000
 connectDB()
@@ -17,21 +18,22 @@ connectCloudinary()
 
 
 // middlewares
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(cors())
 
 // api endpoint
 
-app.use('/api/admin',adminRouter);
-app.use('/api/doctor',doctorRouter)
-app.use('/api/user',userRouter)
+app.use('/api/admin', adminRouter);
+app.use('/api/doctor', doctorRouter)
+app.use('/api/user', userRouter)
+app.use('/api/chat', chatRouter)
 
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
   res.send("Api worrkingggg")
 })
 
-app.listen(port,(err)=>{
-    console.log("Server Started",port)
+app.listen(port, (err) => {
+  console.log("Server Started", port)
 })
